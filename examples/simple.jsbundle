@@ -1,0 +1,96 @@
+__d('rn-picker/examples/simple.js',function(global, require, module, exports) {  'use strict';
+
+
+var React=require('react-native/Libraries/react-native/react-native.js');
+var Picker=require('rn-picker/src/index.js');var 
+
+AppRegistry=
+
+
+React.AppRegistry;var View=React.View;var StyleSheet=React.StyleSheet;
+
+var count=0;
+var len=10;
+
+var PickerExample=React.createClass({displayName:'PickerExample',
+getInitialState:function(){
+return {
+items:this.getItems(count)};},
+
+
+onValueChange:function(value){
+console.log('onChange',value);
+this.setState({value:value});},
+
+getItems:function(start){
+var items=[];
+for(var i=start;i<start+len;i++){
+items.push({
+value:i+'',
+label:'content '+i});}
+
+
+return items;},
+
+render:function(){
+return (
+React.createElement(View,{style:styles.container},
+React.createElement(Picker,{style:styles.picker,defaultSelectedValue:'3',selectedValue:this.state.value,onValueChange:this.onValueChange},
+this.state.items)));}});
+
+
+
+
+
+
+var styles=StyleSheet.create({
+container:{
+flex:1,
+backgroundColor:'#F5F5F9'}});
+
+
+AppRegistry.registerComponent('simple',function(){return PickerExample;});
+});
+__d('rn-picker/src/index.js',function(global, require, module, exports) {  var 
+
+
+React=require('react-native/Libraries/react-native/react-native.js');
+var uuid=1;var 
+
+
+View=
+
+
+React.View;var PickerIOS=React.PickerIOS;var PropTypes=React.PropTypes;
+
+var Picker=React.createClass({displayName:"Picker",
+propTypes:{
+defaultSelectedValue:PropTypes.any,
+children:PropTypes.array},
+
+getDefaultProps:function(props){
+return {
+key:"rn-picker"+uuid++};},
+
+
+render:function(){
+var children=this.props.children;
+var selectedValue=this.props.selectedValue||this.props.defaultSelectedValue;
+if(children&&children.length>0){
+return React.createElement(PickerIOS,babelHelpers.extends({},this.props,{selectedValue:selectedValue}),
+this.props.children.map(function(item,i){
+return (
+React.createElement(PickerIOS.Item,{value:item.value,label:item.label,key:item.value}));}));}else 
+
+
+
+{
+return React.createElement(View,null);}}});
+
+
+
+
+module.exports=Picker;
+});
+;require("rn-picker/examples/simple.js");
+__SSTOKENSTRING = "@generated SignedSource<<7dbd1f1c1a34127b29861daf3d710046>>";
