@@ -1,0 +1,39 @@
+{
+  "name": "rn-picker",
+  "version": "0.1.0",
+  "description": "React Native Picker Component",
+  "keywords": [
+    "react",
+    "react-native",
+    "react-rn-picker",
+    "rn-picker"
+  ],
+  "homepage": "https://github.com/react-component/rn-picker",
+  "maintainers": [
+    "swainet@126.com"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:react-component/rn-picker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/react-component/rn-picker/issues"
+  },
+  "licenses": "MIT",
+  "main": "./src/index",
+  "config": {
+    "port": 8000
+  },
+  "scripts": {
+    "start": "rn-tools run build && ./node_modules/rc-server/bin/start.js",
+    "build": "rn-tools run build",
+    "gh-pages": "rn-tools run gh-pages",
+    "pub": "rn-tools run pub",
+    "lint": "rn-tools run lint"
+  },
+  "devDependencies": {
+    "rc-server": "^3.3.4",
+    "rmc-react-native": "~0.2.0",
+    "rn-tools": "0.x"
+  }
+}
