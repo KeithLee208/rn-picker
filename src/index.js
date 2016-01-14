@@ -25,7 +25,7 @@ const Picker = React.createClass({
     let selectedValue = this.props.selectedValue || this.props.defaultSelectedValue;
     if (children && children.length > 0) {
       return (<PickerIOS {...this.props} selectedValue={selectedValue}>
-          {this.props.children.map((item, i) => {
+          {children.map((item, i) => {
             return (
               <PickerIOS.Item value={item.value} label={item.label} key={item.value} />
             );
