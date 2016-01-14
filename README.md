@@ -13,6 +13,8 @@ React Native Picker Component
 npm install
 ```
 
+online  http://react-component.github.io/rn-picker
+
 ## Install
 
 [![rn-picker](https://nodei.co/npm/rn-picker.png)](https://npmjs.org/package/rn-picker)
