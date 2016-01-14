@@ -3,15 +3,19 @@
 React Native Picker Component
 
 
+## Screenshot
+
+<img title="Screenshot" src="https://cloud.githubusercontent.com/assets/50817/12316859/44711c52-bac6-11e5-8ee3-ce2a3d34d67f.png" width="320">
+
 ## Development
 
 ```
 npm install
 ```
 
-## Screenshot
+## Install
 
-<img title="Screenshot" src="https://cloud.githubusercontent.com/assets/50817/12316859/44711c52-bac6-11e5-8ee3-ce2a3d34d67f.png" width="320">
+[![rn-picker](https://nodei.co/npm/rn-picker.png)](https://npmjs.org/package/rn-picker)
 
 ## API
 
