@@ -16,10 +16,16 @@ const Picker = React.createClass({
       onValueChange: noop
     };
   },
+  getInitialState() {
+    return {
+      value: this.props.selectedValue
+    };
+  },
   onValueChange(value) {
-    if (value === '') {
+    if (value === '' || value === this.state.value) {
       return;
     }
+    this.state.value = value;
     this.props.onValueChange(value);
   },
   render() {
