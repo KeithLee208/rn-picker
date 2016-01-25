@@ -2,7 +2,7 @@
 'use strict';
 
 const React = require('react-native');
-const Picker = require('../src/index');
+const Picker = require('rn-picker');
 const {
   AppRegistry,
   View,
